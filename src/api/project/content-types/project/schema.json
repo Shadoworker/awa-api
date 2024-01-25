@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "customField",
+      "options": {
+        "uuid-format": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+      },
+      "customField": "plugin::strapi-advanced-uuid.uuid"
+    },
+    "team": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team.team",
+      "inversedBy": "project"
+    },
+    "scenes": {
+      "type": "json"
+    },
+    "awaElementsCounter": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "awaCanvasesCounter": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "scenesCounter": {
+      "type": "integer",
+      "default": 1
+    },
+    "flowsCounter": {
+      "type": "integer",
+      "default": 0
+    },
+    "interactionsCounter": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "animationsCounter": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "generatedSvg": {
+      "type": "richtext"
+    },
+    "creator": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "projects"
+    }
+  }
+}
