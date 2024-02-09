@@ -32,12 +32,12 @@
       "type": "json"
     },
     "awaElementsCounter": {
-      "type": "biginteger",
-      "default": "0"
+      "type": "integer",
+      "default": 0
     },
     "awaCanvasesCounter": {
-      "type": "biginteger",
-      "default": "0"
+      "type": "integer",
+      "default": 0
     },
     "scenesCounter": {
       "type": "integer",
@@ -48,12 +48,12 @@
       "default": 0
     },
     "interactionsCounter": {
-      "type": "biginteger",
-      "default": "0"
+      "type": "integer",
+      "default": 0
     },
     "animationsCounter": {
-      "type": "biginteger",
-      "default": "0"
+      "type": "integer",
+      "default": 0
     },
     "generatedSvg": {
       "type": "richtext"

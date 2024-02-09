@@ -394,12 +394,12 @@ export interface ApiProjectProject extends Schema.CollectionType {
       'api::team.team'
     >;
     scenes: Attribute.JSON;
-    awaElementsCounter: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
-    awaCanvasesCounter: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
+    awaElementsCounter: Attribute.Integer & Attribute.DefaultTo<0>;
+    awaCanvasesCounter: Attribute.Integer & Attribute.DefaultTo<0>;
     scenesCounter: Attribute.Integer & Attribute.DefaultTo<1>;
     flowsCounter: Attribute.Integer & Attribute.DefaultTo<0>;
-    interactionsCounter: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
-    animationsCounter: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
+    interactionsCounter: Attribute.Integer & Attribute.DefaultTo<0>;
+    animationsCounter: Attribute.Integer & Attribute.DefaultTo<0>;
     generatedSvg: Attribute.RichText;
     creator: Attribute.Relation<
       'api::project.project',
